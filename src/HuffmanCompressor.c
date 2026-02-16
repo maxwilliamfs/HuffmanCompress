@@ -2,12 +2,17 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <string.h>
+#include "Structures.h"
+#include "TBuilder.h"
 
 //Prototipos
 void menuPrincipal();
 
 int main(){
     while (1) {
+        addNoFilaPrioridade(&FILAPRIORIDADE,'A',5);
+        addNoFilaPrioridade(&FILAPRIORIDADE,'A',1);
+        printFilaPrioridade(FILAPRIORIDADE);
         menuPrincipal();
     }    
 }
