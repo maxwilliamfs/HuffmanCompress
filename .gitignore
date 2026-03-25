@@ -1,0 +1,3 @@
+*.o
+HuffmanCompressor
+/src/output/
