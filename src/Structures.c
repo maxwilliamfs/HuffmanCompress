@@ -18,8 +18,20 @@ void addNoFilaPrioridade(No **inicio, unsigned char carac, int freq){
     No *novo = criarNo(carac, freq);
     if(*(inicio) == NULL){
         *(inicio) = novo;
+    } else if ((*inicio)->prox == NULL) {
+        if (novo->frequencia >= (*inicio)->frequencia) {
+            (*inicio)->prox = novo;
+        } else {
+            novo->prox = *(inicio);
+            *(inicio) = novo;
+        }
     } else {
         No *atual = *(inicio);
+        if (atual->frequencia > novo->frequencia) {
+            novo->prox = *(inicio);
+            *(inicio) = novo;
+            return;
+        }
         while (atual->prox != NULL && atual->prox->frequencia < novo->frequencia) {
             atual = atual->prox;
         }
@@ -33,5 +45,5 @@ void printFilaPrioridade(No *inicio){
         printf("%d ", atual->frequencia);
         atual = atual->prox;
     }
-    
+    printf("\n");
 }

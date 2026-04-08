@@ -1,6 +1,7 @@
 //Bibliotecas
 #include <stdio.h>
 #include <stdbool.h>
+#include <stdlib.h>
 #include <string.h>
 #include "Structures.h"
 #include "TBuilder.h"
@@ -10,9 +11,6 @@ void menuPrincipal();
 
 int main(){
     while (1) {
-        addNoFilaPrioridade(&FILAPRIORIDADE,'A',5);
-        addNoFilaPrioridade(&FILAPRIORIDADE,'A',1);
-        printFilaPrioridade(FILAPRIORIDADE);
         menuPrincipal();
     }    
 }
@@ -37,10 +35,12 @@ void menuPrincipal(){
         } else if(strcmp(comando,"-d") == 0){
             
         } else if(strcmp(comando,"help") == 0){
-            
+            printf("%s","<-c arquivo> - Comprime o arquivo .txt em .huff\n");
+            printf("%s","<-d arquivo> - Descomprime o arquivo .huff em .txt\n");
+            printf("%s", "<exit> - fechar programa\n\n");
         } else if(strcmp(comando,"exit") == 0){
-            
-        }else {
+            exit((0));
+        } else {
             printf("\nERRO: Informe um comando valido...\n");
         }
     }
