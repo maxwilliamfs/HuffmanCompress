@@ -25,4 +25,5 @@ void compress(char caminho[]){
             addNoFilaPrioridade(&FILAPRIORIDADE,i,dicionario[i]);
         }
     }
+    //criarArvoreBinaria(FILAPRIORIDADE);
 }

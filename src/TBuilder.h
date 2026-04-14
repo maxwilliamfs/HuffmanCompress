@@ -6,12 +6,13 @@
 #include <stdio.h>
 
 //PreProcessamento
-#define FILAPRIORIDADE FilaPrioridade 
+#define FILAPRIORIDADE filaPrioridade
 
 //Variaveis globais
-extern No *FilaPrioridade;
+extern No *filaPrioridade;
+extern No *arvoreBinaria;
 
 //Prototipos
-
+void criarArvoreBinaria(No* raiz);
 
 #endif

@@ -21,4 +21,5 @@ No* criarNo(unsigned char caractere, int frequencia);
 void addNoFilaPrioridade(No **inicio, unsigned char carac, int freq);
 void printFilaPrioridade(No *inicio);
 int buscarFilaPrioridade(No *inicio, char valor);
+void deletarPrimeiroFilaPrioridade(No **inicio);
 #endif

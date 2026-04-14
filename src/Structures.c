@@ -47,17 +47,8 @@ void printFilaPrioridade(No *inicio){
     }
     printf("\n");
 }
-int buscarFilaPrioridade(No *inicio, char valor) {
-    No *atual = inicio;
-    if (atual == NULL) {
-        return -1;
-    }
-    while (atual->prox != NULL) {
-        if (atual->caractere == valor) {
-            return 1;
-        } else {
-            atual = atual->prox;
-        }
-    }
-    return -1;
+void deletarPrimeiroFilaPrioridade(No **inicio) {
+    No *deletar = *inicio;
+    *inicio = (*inicio)->prox;
+    free(deletar);
 }
