@@ -5,4 +5,5 @@
 //Prototipos
 void compress(char caminho[]);
 
+
 #endif

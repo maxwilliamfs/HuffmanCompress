@@ -1,8 +1,8 @@
 //Bibliotecas
 #include <stdio.h>
-#include <stdbool.h>
 #include <stdlib.h>
 #include <string.h>
+#include "Compressor.h"
 #include "Structures.h"
 #include "TBuilder.h"
 
@@ -31,7 +31,8 @@ void menuPrincipal(){
         if(strcmp(comando,"-c") == 0){
             argumento = strtok(NULL," ");
             sprintf(caminhocompleto,"Archives/%s.txt",argumento);
-            
+            compress(caminhocompleto);
+            printFilaPrioridade(FILAPRIORIDADE);
         } else if(strcmp(comando,"-d") == 0){
             
         } else if(strcmp(comando,"help") == 0){

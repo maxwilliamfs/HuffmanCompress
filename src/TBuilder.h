@@ -11,5 +11,7 @@
 //Variaveis globais
 extern No *FilaPrioridade;
 
+//Prototipos
+
 
 #endif
