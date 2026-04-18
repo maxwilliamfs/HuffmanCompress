@@ -75,22 +75,22 @@ void addNoPaiFilaPrioridade(No **inicio, int freq, No *esquerda, No *direita){
 }
 void printFilaPrioridade(No *inicio){
     No *atual = inicio;
+    printf("\n--------------------INICIO FILA----------------------\n");
     while (atual != NULL) {
         printNoFilaPrioridade(atual);
         if (atual->esquerda != NULL) {
-            printf("Esquerda: %c\n", atual->esquerda->caractere);
+            printf("---> Esquerda: %c\n", atual->esquerda->caractere);
         }
         if (atual->direita != NULL) {
-            printf("Direita: %c\n", atual->direita->caractere);
+            printf("---> Direita: %c\n", atual->direita->caractere);
         }
         atual = atual->prox;
     }
+    printf("--------------------FIM FILA----------------------\n");
 }
 void printNoFilaPrioridade(No *no) {
     printf("Caractere: %c, Frequencia: %d\n", no->caractere, no->frequencia);
 }
 void deletarPrimeiroFilaPrioridade(No **inicio) {
-    No *deletar = *inicio;
     *inicio = (*inicio)->prox;
-    free(deletar);
 }

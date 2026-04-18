@@ -13,6 +13,6 @@ extern No *filaPrioridade;
 extern No *arvoreBinaria;
 
 //Prototipos
-void criarArvoreBinaria(No* raiz);
+void criarArvoreBinaria(No **raiz);
 
 #endif
