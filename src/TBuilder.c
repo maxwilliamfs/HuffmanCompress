@@ -10,11 +10,14 @@ No *arvoreBinaria = NULL;
 void criarArvoreBinaria(No* raiz) {
     No *atual = raiz;
     while (atual->prox != NULL) {
+        printFilaPrioridade(FILAPRIORIDADE);
+        printf("Atual: %d\n", atual->frequencia);
         addNoFilaPrioridade(&FILAPRIORIDADE,'*',atual->frequencia+atual->prox->frequencia);
+        printFilaPrioridade(FILAPRIORIDADE);
         deletarPrimeiroFilaPrioridade(&FILAPRIORIDADE);
         deletarPrimeiroFilaPrioridade(&FILAPRIORIDADE);
+        printFilaPrioridade(FILAPRIORIDADE);
     }
-    printFilaPrioridade(FILAPRIORIDADE);
 }
 
 

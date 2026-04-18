@@ -28,11 +28,11 @@
   <component name="ChangeListManager">
     <list default="true" id="08e7f9c6-a54a-4ffc-ad5a-13c0ba3508cc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Archives/Teste.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Archives/Teste.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Compressor.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/Compressor.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Structures.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/Structures.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Structures.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Structures.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TBuilder.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/TBuilder.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TBuilder.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/TBuilder.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +106,8 @@
       <workItem from="1775000267272" duration="756000" />
       <workItem from="1775657943358" duration="6816000" />
       <workItem from="1775854690398" duration="600000" />
-      <workItem from="1776172752952" duration="8224000" />
+      <workItem from="1776172752952" duration="8401000" />
+      <workItem from="1776542058552" duration="1287000" />
     </task>
     <servers />
   </component>
