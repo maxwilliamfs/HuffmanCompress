@@ -3,10 +3,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "Structures.h"
-#include "TBuilder.h"
 
-//Variaveis
+//Variaveis Globais
 FILE *arquivo;
+No *filaPrioridade = NULL;
+No *arvoreBinaria = NULL;
 
 //Funcoes
 void compress(char caminho[]){
@@ -26,4 +27,11 @@ void compress(char caminho[]){
         }
     }
     criarArvoreBinaria(&FILAPRIORIDADE);
+}
+void criarArvoreBinaria(No** raiz) {
+    while ((*raiz)->prox != NULL) {
+        addNoPaiFilaPrioridade(&FILAPRIORIDADE,(*raiz)->frequencia+(*raiz)->prox->frequencia, (*raiz), (*raiz)->prox);
+        deletarPrimeiroFilaPrioridade(&FILAPRIORIDADE);
+        deletarPrimeiroFilaPrioridade(&FILAPRIORIDADE);
+    }
 }
