@@ -6,12 +6,12 @@
 #include "BytesIO.h"
 
 //Variaveis Globais
-FILE *arquivo;
 No *filaPrioridade = NULL;
 No *arvoreBinaria = NULL;
 
 //Funcoes
 void compress(char caminho[]){
+    FILE *arquivo;
     int dicionario[256] = {0}, leitura;
     arquivo = fopen(caminho,"r");
     if (arquivo == NULL) {
@@ -28,6 +28,9 @@ void compress(char caminho[]){
         }
     }
     criarArvoreBinaria(&FILAPRIORIDADE);
+    char dicionarioFinal[256][256] = {{0}};
+    criarDicionario(FILAPRIORIDADE,dicionarioFinal);
+    gerarArquivoCompresso(dicionarioFinal, caminho);
 }
 void criarArvoreBinaria(No** raiz) {
     while ((*raiz)->prox != NULL) {
@@ -35,12 +38,9 @@ void criarArvoreBinaria(No** raiz) {
         deletarPrimeiroFilaPrioridade(&FILAPRIORIDADE);
         deletarPrimeiroFilaPrioridade(&FILAPRIORIDADE);
     }
-    criarDicionario(*raiz);
 }
-void criarDicionario(No *raiz) {
-    char dicionario[256][256];
+void criarDicionario(No *raiz, char dicionario[256][256]){
     MapearArvoreBinaria(raiz, dicionario, "");
-    gerarArquivoCompresso(dicionario);
 }
 void MapearArvoreBinaria(No *atual, char dicionario[256][256], char codigo[256]){
     char cod[256];
