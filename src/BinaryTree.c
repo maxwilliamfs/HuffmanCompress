@@ -2,6 +2,8 @@
 #include "BinaryTree.h"
 #include <stdio.h>
 
+#include "Compressor.h"
+
 //Variaveis Globais
 No *arvoreBinaria = NULL;
 
@@ -29,6 +31,9 @@ void MapearArvoreBinaria(No *atual, char dicionario[256][256], char codigo[256])
     if (atual->direita == NULL && atual->esquerda == NULL) {
         strcpy(dicionario[atual->caractere],codigo);
     }
+}
+void serializarArvoreBinaria(No *raiz) {
+    
 }
 
 //Funcoes de Descompressao

@@ -1,5 +1,5 @@
 //Bibliotecas
-#include "Compressor.h"
+#include "Descompressor.h"
 
 //Funcoes
 void descompress(char caminho[]) {

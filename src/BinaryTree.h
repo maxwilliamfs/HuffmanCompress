@@ -8,8 +8,10 @@
 extern No *arvoreBinaria;
 
 //Prototipos
+     //Compressao
 void criarArvoreBinaria(No **raiz);
 void criarDicionario(No *raiz, char dicionario[256][256]);
 void MapearArvoreBinaria(No *atual, char dicionario[256][256], char codigo[256]);
+     //Descompressao
 
 #endif
