@@ -9,7 +9,6 @@
 //Variaveis Globais
 No *filaPrioridade = NULL;
 
-
 //Funcoes
 void compress(char caminho[]){
     FILE *arquivo;
