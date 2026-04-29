@@ -28,11 +28,8 @@
   <component name="ChangeListManager">
     <list default="true" id="08e7f9c6-a54a-4ffc-ad5a-13c0ba3508cc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BinaryTree.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinaryTree.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BinaryTree.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinaryTree.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Descompressor.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/Descompressor.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HuffmanCompressor.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/HuffmanCompressor.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BytesIO.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/BytesIO.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,11 +90,6 @@
   }
 }</component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Huff.exe" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HuffmanCompress" TARGET_NAME="Huff.exe" CONFIG_NAME="Run" RUN_TARGET_PROJECT_NAME="HuffmanCompress" RUN_TARGET_NAME="Huff.exe">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -118,6 +110,8 @@
       <workItem from="1776542058552" duration="7612000" />
       <workItem from="1776617874985" duration="7336000" />
       <workItem from="1776780070087" duration="2735000" />
+      <workItem from="1777415277051" duration="12000" />
+      <workItem from="1777481185874" duration="759000" />
     </task>
     <servers />
   </component>

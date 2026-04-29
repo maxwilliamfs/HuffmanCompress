@@ -2,6 +2,7 @@
 #include "BytesIO.h"
 #include <stdio.h>
 #include <string.h>
+#include "BinaryTree.h"
 
 //Variaveis Globais
 int qBits = 0;

@@ -1,6 +1,7 @@
 //Bibliotecas
 #include "BinaryTree.h"
 #include <stdio.h>
+#include <string.h>
 
 #include "Compressor.h"
 
