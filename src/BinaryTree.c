@@ -2,7 +2,6 @@
 #include "BinaryTree.h"
 #include <stdio.h>
 #include <string.h>
-
 #include "Compressor.h"
 
 //Variaveis Globais
@@ -33,8 +32,28 @@ void MapearArvoreBinaria(No *atual, char dicionario[256][256], char codigo[256])
         strcpy(dicionario[atual->caractere],codigo);
     }
 }
-void serializarArvoreBinaria(No *raiz) {
-    
+int serializarArvoreBinaria(No *raiz, FILE *arquivo) {
+    int tArvoreBinaria = 0;
+    serializandoArvoreBinariaRecursiva(raiz,arquivo,&tArvoreBinaria);
+    return tArvoreBinaria;
+}
+void serializandoArvoreBinariaRecursiva(No *atual, FILE *arquivo, int *tArvoreBinaria) {
+    (*tArvoreBinaria) += 1;
+    if (atual->esquerda != NULL || atual->direita != NULL) {
+        fputc('*',arquivo);
+        if (atual->esquerda != NULL) {
+            serializandoArvoreBinariaRecursiva(atual->esquerda,arquivo,tArvoreBinaria);
+        }
+        if (atual->direita != NULL) {
+            serializandoArvoreBinariaRecursiva(atual->direita,arquivo,tArvoreBinaria);
+        }
+    } else {
+        if (atual->caractere == '*' || atual->caractere == '/') {
+            (*tArvoreBinaria) += 1;
+            fputc('/',arquivo);
+        }
+        fputc(atual->caractere,arquivo);
+    }
 }
 
 //Funcoes de Descompressao

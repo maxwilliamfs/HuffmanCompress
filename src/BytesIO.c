@@ -2,7 +2,9 @@
 #include "BytesIO.h"
 #include <stdio.h>
 #include <string.h>
+#include <stdint.h>
 #include "BinaryTree.h"
+#include "Compressor.h"
 
 //Variaveis Globais
 int qBits = 0;
@@ -18,19 +20,25 @@ void gerarArquivoCompresso(char dicionario[256][256], char caminho[]) {
 
     FILE *arquivoSaida = fopen(caminhoSaida,"wb");
 
-    int buffer;
+    //Iniciar Cabecalho
+    fputc(0,arquivoSaida);
+    fputc(0,arquivoSaida);
+    int qArvoreBinaria = serializarArvoreBinaria(FILAPRIORIDADE,arquivoSaida);
+
+    int buffer, qLixo;
     while ((buffer = fgetc(arquivoEntrada)) != EOF) {
         for (int i = 0; i < strlen(dicionario[buffer]); i++) {
             escreverBit(arquivoSaida,dicionario[buffer][i]);
         }
     }
     if (qBits != 0) {
-        int qLixo = 8 - qBits;
+        qLixo = 8 - qBits;
         for (int i = 0; i < qLixo; i++) {
             byte = byte << 1;
         }
         fwrite(&byte,sizeof(unsigned char),1,arquivoSaida);
     }
+    finalizarCabecalho(qLixo,qArvoreBinaria,arquivoSaida);
     fclose(arquivoEntrada);
     fclose(arquivoSaida);
     printf("%s","\nArquivo Compresso com sucesso!\n\n");
@@ -46,4 +54,12 @@ void escreverBit(FILE *arquivo, unsigned char valor) {
         byte = 0;
         qBits = 0;
     }
+}
+void finalizarCabecalho(int qLixo, int qArvoreBinaria, FILE *arquivo) {
+    rewind(arquivo);
+    uint16_t qArvoreCerta = (uint16_t) qArvoreBinaria;
+    unsigned char byte = (qLixo << 5) | (qArvoreCerta >> 8);
+    unsigned char byte2 = (qArvoreCerta) & 255;
+    fputc(byte,arquivo);
+    fputc(byte2,arquivo);
 }
