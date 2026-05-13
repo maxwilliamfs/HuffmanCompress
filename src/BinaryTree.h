@@ -16,5 +16,5 @@ void MapearArvoreBinaria(No *atual, char dicionario[256][256], char codigo[256])
 int serializarArvoreBinaria(No *raiz, FILE *arquivo);
 void serializandoArvoreBinariaRecursiva(No *atual, FILE *arquivo,int *tArvoreBinaria);
      //Descompressao
-
+void reeconstruirArvoreBinaria(int tArvore, int *atualArvore, FILE *arquivo, No *atual);
 #endif
