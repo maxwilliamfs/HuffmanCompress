@@ -17,7 +17,7 @@ void descompress(char caminho[]) {
     int atualarvore = 0;
     FILAPRIORIDADE = criarNoVazio();
     reeconstruirArvoreBinaria(qTamanhoArvore,&atualarvore,arquivo,FILAPRIORIDADE);
-    printFilaPrioridade(FILAPRIORIDADE);
+    printFilaPrioridadeInteira(FILAPRIORIDADE);
 }
 void lerCabecalho(int *qLixo, int *qArvore, FILE *arquivo) {
     unsigned char byte = fgetc(arquivo), byte2 = fgetc(arquivo);

@@ -16,7 +16,7 @@ void gerarArquivoCompresso(char dicionario[256][256], char caminho[]) {
 
     char *nomeArquivo = strtok(caminho,"/"), caminhoSaida[256];
     nomeArquivo = strtok(NULL,".");
-    sprintf(caminhoSaida,"Compressed/%s.huff",nomeArquivo);
+    sprintf(caminhoSaida,"Output/%s.huff",nomeArquivo);
 
     FILE *arquivoSaida = fopen(caminhoSaida,"wb");
 

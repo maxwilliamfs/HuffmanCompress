@@ -19,6 +19,7 @@ typedef struct Item {
     //No
 No* criarNo(unsigned char caractere, int frequencia);
 No* criarNoVazio();
+void printFilaPrioridadeInteira(No *inicio);
 void printNoFilaPrioridade(No *no);
 No* criarNoPai(int frequencia, No *esquerda, No *direita);
 void addNoPaiFilaPrioridade(No **inicio, int freq, No *esquerda, No *direita);

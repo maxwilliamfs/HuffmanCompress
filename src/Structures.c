@@ -95,6 +95,18 @@ void printFilaPrioridade(No *inicio){
     }
     printf("--------------------FIM FILA----------------------\n");
 }
+void printFilaPrioridadeInteira(No *inicio){
+    No *atual = inicio;
+    if (atual != NULL) {
+        printNoFilaPrioridade(atual);
+        if (atual->esquerda != NULL) {
+            printFilaPrioridadeInteira(atual->esquerda);
+        }
+        if (atual->direita != NULL) {
+            printFilaPrioridadeInteira(atual->direita);
+        }
+    }
+}
 void printNoFilaPrioridade(No *no) {
     printf("Caractere: %c, Frequencia: %d\n", no->caractere, no->frequencia);
 }
