@@ -8,4 +8,5 @@
 void gerarArquivoCompresso(char dicionario[256][256], char caminho[]);
 void escreverBit(FILE *arquivo, unsigned char valor);
 void finalizarCabecalho(int qLixo, int qArvoreBinaria, FILE *arquivo);
+void byteemint(int *array, unsigned char buffer);
 #endif

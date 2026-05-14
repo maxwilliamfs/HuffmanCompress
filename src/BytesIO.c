@@ -63,3 +63,8 @@ void finalizarCabecalho(int qLixo, int qArvoreBinaria, FILE *arquivo) {
     fputc(byte,arquivo);
     fputc(byte2,arquivo);
 }
+void byteemint(int *array, unsigned char buffer) {
+    for (int i = 0; i < 8; i++) {
+        array[i] = (buffer >> (7-i)) & 1;
+    }
+}
