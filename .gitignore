@@ -2,3 +2,5 @@
 HuffmanCompressor
 /src/output/
 cmake-build-run/
+.idea/
+build/
