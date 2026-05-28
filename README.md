@@ -36,7 +36,7 @@ cmake --build build
 ```
 - Executar o projeto:  
 ```bash
-./build/Huff.exe
+./build/HuffmanCompress
 ```
 ## Autor
 **Max William Falcão Santos** - [@maxwilliamfs](https://github.com/maxwilliamfs)
