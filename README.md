@@ -12,9 +12,9 @@ Este projeto é um compressor de arquivos .txt, focado em diminuir consideravelm
 
 ## Tecnologias e Ferramentas
 - Linguagem: C (Padrão C11).
-- Ambiente de Desenvolvimento: Linux Mint.
+- Ambiente de Desenvolvimento: Linux Mint e Pop!OS.
 - Compilador: GCC.
-- IDE: Visual Studio Code
+- IDE: Visual Studio Code e CLion
 - Versionamento: Git & GitHub.
 
 ## Execução
@@ -24,13 +24,17 @@ Este projeto é um compressor de arquivos .txt, focado em diminuir consideravelm
 git clone [https://github.com/maxwilliamfs/HuffmanCompress.git](https://github.com/maxwilliamfs/HuffmanCompress.git)  
 cd HuffmanCompress
 ```
-- Compilar o projeto:
+- Gerar arquivos de compilação:
 ```bash
-make
+cmake -B build
 ```
-- Execultar o projeto:  
+- Compilar o projeto:  
 ```bash
-make run
+cmake --build build
+```
+- Executar o projeto:  
+```bash
+./build/Huff.exe
 ```
 ## Autor
 **Max William Falcão Santos** - [@maxwilliamfs](https://github.com/maxwilliamfs)

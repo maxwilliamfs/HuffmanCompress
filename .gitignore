@@ -4,3 +4,4 @@ HuffmanCompressor
 cmake-build-run/
 .idea/
 build/
+.vscode/

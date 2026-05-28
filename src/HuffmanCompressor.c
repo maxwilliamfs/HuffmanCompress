@@ -38,9 +38,12 @@ void menuPrincipal(){
         } else if(strcmp(comando,"help") == 0){
             printf("%s","<-c arquivo> - Comprime o arquivo .txt em .huff\n");
             printf("%s","<-d arquivo> - Descomprime o arquivo .huff em .txt\n");
+            printf("%s","<clear> -Limpa o console\n");
             printf("%s", "<exit> - fechar programa\n\n");
         } else if(strcmp(comando,"exit") == 0){
             exit((0));
+        } else if(strcmp(comando,"clear") == 0){
+            system("clear");
         } else {
             printf("\nERRO: Informe um comando valido...\n");
         }
