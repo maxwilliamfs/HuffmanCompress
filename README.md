@@ -1,5 +1,7 @@
 # HuffmanCompress
 
+![Menu de Funcionalidades](assets/screenshot.png)
+
 ## Descrição
 Este projeto é um compressor de arquivos .txt, focado em diminuir consideravelmente o tamanho de tais arquivos com a utilização do método de Huffman.
 - Projeto em Desenvolvimento
