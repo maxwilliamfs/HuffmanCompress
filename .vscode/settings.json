@@ -1,0 +1,6 @@
+{
+    "code-runner.executorMap": {
+        "c": "cmake --build build && clear && ./build/Huff.exe"
+    },
+    "code-runner.runInTerminal": true
+}
