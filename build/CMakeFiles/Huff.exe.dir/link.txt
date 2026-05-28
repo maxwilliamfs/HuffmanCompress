@@ -1,1 +1,0 @@
-/usr/bin/cc CMakeFiles/Huff.exe.dir/src/HuffmanCompressor.c.o CMakeFiles/Huff.exe.dir/src/BytesIO.c.o CMakeFiles/Huff.exe.dir/src/Compressor.c.o CMakeFiles/Huff.exe.dir/src/Descompressor.c.o CMakeFiles/Huff.exe.dir/src/Structures.c.o CMakeFiles/Huff.exe.dir/src/BinaryTree.c.o -o Huff.exe 
