@@ -29,11 +29,11 @@ void menuPrincipal(){
         //Comandos
         if(strcmp(comando,"-c") == 0){
             argumento = strtok(NULL," ");
-            sprintf(caminhocompleto,"Archives/%s.txt",argumento);
+            sprintf(caminhocompleto,"Input/%s.txt",argumento);
             compress(caminhocompleto);
         } else if(strcmp(comando,"-d") == 0){
             argumento = strtok(NULL," ");
-            sprintf(caminhocompleto,"Archives/%s.txt",argumento);
+            sprintf(caminhocompleto,"Input/%s.huff",argumento);
             descompress(caminhocompleto);
         } else if(strcmp(comando,"help") == 0){
             printf("%s","<-c arquivo> - Comprime o arquivo .txt em .huff\n");

@@ -1,0 +1,3 @@
+/home/maxwilliamfalcaosantos/Documentos/GitHub/HuffmanCompress/build/CMakeFiles/Huff.exe.dir
+/home/maxwilliamfalcaosantos/Documentos/GitHub/HuffmanCompress/build/CMakeFiles/edit_cache.dir
+/home/maxwilliamfalcaosantos/Documentos/GitHub/HuffmanCompress/build/CMakeFiles/rebuild_cache.dir

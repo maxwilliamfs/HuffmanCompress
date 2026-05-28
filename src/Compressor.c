@@ -31,4 +31,5 @@ void compress(char caminho[]){
     char dicionarioFinal[256][256] = {{0}};
     criarDicionario(FILAPRIORIDADE,dicionarioFinal);
     gerarArquivoCompresso(dicionarioFinal, caminho);
+    deletarFilaPrioridade(&FILAPRIORIDADE);
 }

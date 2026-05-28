@@ -14,6 +14,13 @@ No* criarNo(unsigned char caractere, int frequencia){
     novo->prox = NULL;
     return novo;
 }
+No* criarNoVazio(){
+    No *novo = malloc(sizeof(No));
+    novo->direita = NULL;
+    novo->esquerda = NULL;
+    novo->prox = NULL;
+    return novo;
+}
 No* criarNoPai(int frequencia, No *esquerda, No *direita){
     No *novo = malloc(sizeof(No));
     novo->frequencia = frequencia;
@@ -88,9 +95,34 @@ void printFilaPrioridade(No *inicio){
     }
     printf("--------------------FIM FILA----------------------\n");
 }
+void printFilaPrioridadeInteira(No *inicio){
+    No *atual = inicio;
+    if (atual != NULL) {
+        printNoFilaPrioridade(atual);
+        if (atual->esquerda != NULL) {
+            printFilaPrioridadeInteira(atual->esquerda);
+        }
+        if (atual->direita != NULL) {
+            printFilaPrioridadeInteira(atual->direita);
+        }
+    }
+}
 void printNoFilaPrioridade(No *no) {
     printf("Caractere: %c, Frequencia: %d\n", no->caractere, no->frequencia);
 }
 void deletarPrimeiroFilaPrioridade(No **inicio) {
     *inicio = (*inicio)->prox;
+}
+void deletarFilaPrioridade(No **inicio) {
+    while ((*inicio) != NULL) {
+        No *atual = (*inicio);
+        while (atual->prox != NULL) {
+            atual = atual->prox;
+        }
+        free(atual);
+        if (atual == (*inicio)) {
+            (*inicio) = NULL;
+        }
+
+    }
 }

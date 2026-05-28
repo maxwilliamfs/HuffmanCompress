@@ -57,3 +57,24 @@ void serializandoArvoreBinariaRecursiva(No *atual, FILE *arquivo, int *tArvoreBi
 }
 
 //Funcoes de Descompressao
+void reeconstruirArvoreBinaria(int tArvore, int *atualArvore, FILE *arquivo, No *atual) {
+    *atualArvore += 1;
+    int arvoretemp = *atualArvore;
+    if (*atualArvore > tArvore) {
+        return;
+    }
+    unsigned char buffer = fgetc(arquivo);
+    if (buffer == '*') {
+        atual->caractere = '*';
+        atual->esquerda = criarNoVazio();
+        atual->direita = criarNoVazio();
+        reeconstruirArvoreBinaria(tArvore,atualArvore,arquivo,atual->esquerda);
+        reeconstruirArvoreBinaria(tArvore,atualArvore,arquivo,atual->direita);
+    } else {
+        if (buffer == '/') {
+            buffer = fgetc(arquivo);
+            *atualArvore += 1;
+        }
+        atual->caractere = buffer;
+    }
+}

@@ -16,7 +16,7 @@ void gerarArquivoCompresso(char dicionario[256][256], char caminho[]) {
 
     char *nomeArquivo = strtok(caminho,"/"), caminhoSaida[256];
     nomeArquivo = strtok(NULL,".");
-    sprintf(caminhoSaida,"Compressed/%s.huff",nomeArquivo);
+    sprintf(caminhoSaida,"Output/%s.huff",nomeArquivo);
 
     FILE *arquivoSaida = fopen(caminhoSaida,"wb");
 
@@ -62,4 +62,9 @@ void finalizarCabecalho(int qLixo, int qArvoreBinaria, FILE *arquivo) {
     unsigned char byte2 = (qArvoreCerta) & 255;
     fputc(byte,arquivo);
     fputc(byte2,arquivo);
+}
+void byteemint(int *array, unsigned char buffer) {
+    for (int i = 0; i < 8; i++) {
+        array[i] = (buffer >> (7-i)) & 1;
+    }
 }
