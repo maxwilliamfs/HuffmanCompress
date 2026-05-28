@@ -15,12 +15,13 @@ int main(){
 }
 
 void menuPrincipal(){
-    printf("Informe um comando valido...\n");
+    printf("Bem Vindo ao HuffmanCompress!!!\n");
+    printf("Informe um comando valido ou help para visualizar os comandos\n");
     char entrada[100],caminhocompleto[100],*comando,*argumento;
     fgets(entrada,100,stdin);
 
     if(strcmp(entrada,"\n") == 0){
-        printf("\nERRO: Informe um comando valido...\n");
+        printf("\nERRO: Informe um comando valido ou help para visualizar os comandos\n");
 
     } else {
         entrada[strcspn(entrada,"\n")] = '\0';
@@ -36,10 +37,11 @@ void menuPrincipal(){
             sprintf(caminhocompleto,"Input/%s.huff",argumento);
             descompress(caminhocompleto);
         } else if(strcmp(comando,"help") == 0){
-            printf("%s","<-c arquivo> - Comprime o arquivo .txt em .huff\n");
-            printf("%s","<-d arquivo> - Descomprime o arquivo .huff em .txt\n");
-            printf("%s","<clear> -Limpa o console\n");
-            printf("%s", "<exit> - fechar programa\n\n");
+            printf("%s","\n-c nome_do_arquivo - Comprime o arquivo .txt da pasta Input em .huff para a pasta Output \n");
+            printf("%s","-d nome_do_arquivo - Descomprime o arquivo .huff da pasta Input em .txt para a pasta Output\n");
+            printf("%s","help - Lista os comandos validos\n");
+            printf("%s","clear - Limpa o console\n");
+            printf("%s", "exit - Fechar programa\n\n");
         } else if(strcmp(comando,"exit") == 0){
             exit((0));
         } else if(strcmp(comando,"clear") == 0){

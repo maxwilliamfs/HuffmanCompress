@@ -26,6 +26,7 @@ void descompress(char caminho[]) {
 
     descompressartexto(arquivo,qLixo,caminhosaida);
     fclose(arquivo);
+    printf("%s","\nArquivo Descompresso com sucesso!\n\n");
 }
 void lerCabecalho(int *qLixo, int *qArvore, FILE *arquivo) {
     unsigned char byte = fgetc(arquivo), byte2 = fgetc(arquivo);
